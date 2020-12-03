@@ -1,6 +1,6 @@
-const { resolve } = require('path')
+const { resolve } = require('path');
 // const rawLoader = require('./loaders/raw-loader')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -20,6 +20,14 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        options: { fix: true },
+        include: resolve(__dirname, 'src'),
+        // exclude: /node_modules/,
+      },
+      {
+        test: /\.jsx?$/,
         use: [
           {
             loader: 'babel-loader',
@@ -27,7 +35,7 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  /*{
+                  /* {
                     useBuiltIns: 'usage',
                     corejs: { version: 3 },
                     targets: {
@@ -37,7 +45,7 @@ module.exports = {
                       safari: '10',
                       edge: '17',
                     },
-                  },*/
+                  }, */
                 ],
                 '@babel/preset-react',
               ],
@@ -58,4 +66,4 @@ module.exports = {
       template: resolve(__dirname, './src/index.html'),
     }),
   ],
-}
+};

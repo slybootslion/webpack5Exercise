@@ -80,6 +80,54 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+
+var t = __webpack_require__(/*! ./test.txt */ "./src/test.txt");
+
+console.log(t["default"]);
+var span = document.createElement('span');
+span.innerHTML = t["default"];
+document.body.appendChild(span);
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, "hello"), document.querySelector('#root'));
+
+var sum = function sum(n1, n2) {
+  return n1 + n2;
+};
+
+function readonly(target, key, descriptor) {
+  descriptor.writable = false;
+}
+/*class Person {
+  @readonly PI = 3.14
+}
+
+let p = new Person()
+p.PI = 3.15
+console.log(p)*/
+
+
+console.log('err');
+var promise = new Promise(function (resolve) {
+  return resolve(1);
+});
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -8239,53 +8287,6 @@ if (false) {} else {
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ "./node_modules/scheduler/cjs/scheduler-tracing.development.js");
 }
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-
-
-var t = __webpack_require__(/*! ./test.txt */ "./src/test.txt");
-
-console.log(t["default"]);
-var span = document.createElement('span');
-span.innerHTML = t["default"];
-document.body.appendChild(span);
-
-
-react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, "hello"), document.querySelector('#root'));
-
-var sum = function sum(n1, n2) {
-  return n1 + n2;
-};
-
-function readonly(target, key, descriptor) {
-  descriptor.writable = false;
-}
-/*class Person {
-  @readonly PI = 3.14
-}
-
-let p = new Person()
-p.PI = 3.15
-console.log(p)*/
-
-
-var promise = new Promise(function (resolve) {
-  return resolve(1);
-});
 
 /***/ }),
 
